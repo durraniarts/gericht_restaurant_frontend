@@ -1,0 +1,184 @@
+/* gallery main div section */
+.app__gallery {
+  display: flex;
+  flex-direction: row;
+
+  background: var(--color-black);
+  padding: 4rem 0 4rem 6rem;
+}
+
+/*  text content section */
+
+.app__gallery-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  padding-right: 2rem;
+}
+.app__gallery-content p {
+  max-width: 700px;
+}
+
+/* images section holds cards */
+.app__gallery-images {
+  display: flex;
+  flex-direction: row;
+
+  overflow: hidden;
+  max-width: 45%;
+
+  position: relative;
+}
+
+.app__gallery-images_container {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  overflow: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* images card section */
+
+.app__gallery-images_card {
+  position: relative;
+  width: fit-content;
+  margin-right: 2rem;
+}
+
+.app__gallery-images_card img {
+  width: 300px;
+  height: 447px;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+  border-radius: 5px;
+}
+.gallery__instagram-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  color: var(--color-white);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.app__gallery-images_card:hover .gallery__instagram-icon {
+  opacity: 1;
+}
+
+.app__gallery-images_card:hover img {
+  opacity: 0.4;
+}
+
+/* arrows button section */
+
+.app__gallery-images_arrows {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  bottom: 2rem;
+}
+
+.gallery__arrow-icon {
+  font-size: 2rem;
+  color: var(--color-golden);
+  cursor: pointer;
+  background-color: var(--color-black);
+  border-radius: 20%;
+  opacity: 0.85;
+}
+
+.gallery__arrow-icon:hover {
+  color: var(--color-white);
+}
+
+/* media queries */
+
+/* above 2000px  */
+@media screen and (min-width: 2000px) {
+  .app__gallery-content p {
+    max-width: 1000px;
+  }
+
+  .app__gallery-images {
+    max-width: 40%;
+  }
+  .app__gallery-images_card img {
+    width: 350px;
+    height: 100%;
+  }
+
+  .gallery__arrow-icon {
+    font-size: 3.3rem;
+  }
+}
+
+/* below 1150px */
+@media screen and (max-width: 1150px) {
+  .app__gallery {
+    flex-direction: column;
+  }
+  .app__gallery-images {
+    margin: 5rem 0;
+    max-width: 100%;
+    align-self: flex-start;
+  }
+  .app__gallery-content {
+    align-self: flex-start;
+  }
+  .app__gallery-content p {
+    max-width: 500px;
+  }
+}
+
+/* below 850px */
+@media screen and (max-width: 850px) {
+  .app__gallery {
+    padding: 4rem 0 4rem 4rem;
+  }
+  .app__gallery-images_card img {
+    width: 280px;
+    height: 400px;
+  }
+  .gallery__arrow-icon {
+    font-size: 2.3rem;
+  }
+  .app__gallery-images_arrows {
+    bottom: 1rem;
+  }
+}
+
+/* below 650px */
+@media screen and (max-width: 650px) {
+  .app__gallery {
+    padding: 4rem 0 2rem 2rem;
+  }
+
+  .app__gallery-images_card img {
+    width: 270px;
+  }
+}
+
+/* below 550px */
+@media screen and (max-width: 550px) {
+  .app__gallery-images_card img {
+    width: 250px;
+    height: 370px;
+  }
+}
+
+/* below 450px */
+@media screen and (max-width: 450px) {
+  .app__gallery-images_card img {
+    width: 200px;
+    height: 300px;
+  }
+}

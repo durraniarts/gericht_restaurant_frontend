@@ -1,0 +1,27 @@
+.app__wrapper-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.app__wrapper-content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__wrapper-info {
+    align-self: flex-start;
+  }
+  .app__wrapper-content {
+    gap: 0.7rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app__wrapper-content {
+    gap: 0.3rem;
+  }
+}

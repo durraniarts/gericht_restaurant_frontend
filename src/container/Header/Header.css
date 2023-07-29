@@ -1,0 +1,32 @@
+.app__header {
+  background-color: var(--color-black);
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+.app__header-h1 {
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 117px;
+  font-size: 90px;
+}
+@media screen and (max-width: 850px) {
+  .app__header-h1 {
+    font-size: 64px;
+    line-height: 80px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app__header-h1 {
+    font-size: 50px;
+    line-height: 62px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__wrapper_img img {
+    width: 85% !important;
+  }
+}
